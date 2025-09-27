@@ -52,7 +52,7 @@ function App() {
     <>
       <div className='fixed  bottom-4 left-4 text-xl font-bold text-gray-800 '>
         <h4>Mode: {mode.State}</h4>
-        <h4> {number}</h4>
+        <h4 className=' text-gray-900'> {number}</h4>
       </div>
 
       <div className=' flex flex-col gap-5'>
