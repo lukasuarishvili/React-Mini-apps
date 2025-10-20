@@ -7,7 +7,7 @@ function Arrivals() {
     return (
         <section className='flex flex-col gap-10 mt-12   '>
             <h3 className='text-center font-bold text-5xl'>NEW ARRIVALS</h3>
-            <div className='flex gap-3 w-full justify-center items-center max-w-full overflow-x-auto scrollbar-hide scroll-smooth'>
+            <div className='flex flex-row gap-3 w-full justify-center items-center max-w-full overflow-x-auto scrollbar-hide scroll-smooth'>
 
                 <Item
                     image="https://www.houseofblanks.com/cdn/shop/files/HeavyweightTshirt_Yellow_01.jpg?v=1726516946&width=1946"

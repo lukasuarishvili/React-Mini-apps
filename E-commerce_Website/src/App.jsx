@@ -9,6 +9,7 @@ import Hero from "./components/Hero";
 import Banner from "./components/Banner";
 import Arrivals from "./components/ARRIVALS";
 import TopSelling from "./components/TopSelling";
+import DressStyle from "./components/DressStyle";
 
 function App() {
 
@@ -17,8 +18,6 @@ function App() {
 
   return (
     <>
-
-
       <Ad></Ad>
 
       <Header></Header>
@@ -30,7 +29,8 @@ function App() {
       <Arrivals></Arrivals>
 
       <TopSelling></TopSelling>
-      
+
+      <DressStyle></DressStyle>
     </>
   );
 }
