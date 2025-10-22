@@ -38,6 +38,7 @@ function Hero() {
                         <p className="text-gray-500">Happy Customers</p>
                     </li>
                 </ul>
+              
             </section>
         </div>
     )

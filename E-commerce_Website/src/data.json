@@ -1,0 +1,27 @@
+{
+    "mainImgSrc": "http:asfafasf//img-main-1.jpg",
+    "imgList": [
+        "https://miyamoto-fashion.infinityfreeapp.com/wp-content/uploads/2025/07/image-1-300x300.png",
+        "https://miyamoto-fashion.infinityfreeapp.com/wp-content/uploads/2025/07/image-1-300x300.png",
+        "https://miyamoto-fashion.infinityfreeapp.com/wp-content/uploads/2025/07/image-1-300x300.png"
+    ],
+    "title": "Comfortable Jeans for Gym Look",
+    "rate": 3.5,
+    "price": 158,
+    "discount": 208,
+    "dressStyle": "Gym",
+    "clothesType": "Jeans",
+    "desc": "This jeans is perfect for a gym outfit. Made from a high-quality, breathable fabric, it ensures all-day comfort.",
+    "colorList": [
+        "maroon",
+        "teal"
+    ],
+    "sizeList": [
+        "small",
+        "medium",
+        "large",
+        "x-large"
+    ],
+    "reviews": [],
+    "id": 1
+}

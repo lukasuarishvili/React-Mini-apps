@@ -2,35 +2,27 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 
-// components
-import Ad from './components/Ad'
+//  components
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Banner from "./components/Banner";
-import Arrivals from "./components/ARRIVALS";
-import TopSelling from "./components/TopSelling";
-import DressStyle from "./components/DressStyle";
+
+
+// pages
+import HomePage from "./pages/HomePage";
+import ProductDetailPages from './pages/ProductDetailPage'
+
 
 function App() {
 
 
-
-
   return (
     <>
-      <Ad></Ad>
-
-      <Header></Header>
-
-      <Hero></Hero>
-
-      <Banner></Banner>
-
-      <Arrivals></Arrivals>
-
-      <TopSelling></TopSelling>
-
-      <DressStyle></DressStyle>
+      <BrowserRouter>
+        <header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Product" element={<ProductDetailPages />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
