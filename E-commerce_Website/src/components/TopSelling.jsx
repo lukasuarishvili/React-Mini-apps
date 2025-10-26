@@ -1,53 +1,80 @@
 import React from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react'
+
+
+
 // componets
 import Item from './Item'
 
 
-// IMAGES
-import shirt from '../assets/CLOTH1.png'
-import Tshirt from '../assets/CLOTH2.png'
-import shorts from '../assets/CLOTH3.png'
-import jeans from '../assets/CLOTH4.png'
 
 
 function TopSelling() {
+
+
+    let [products, setproducts] = useState([]);
+    let [cardInfos, setCardInfos] = useState([])
+
+    // thsi gets the data and stores it in products state
+    useEffect(() => {
+
+        const getData = async () => {
+            let res = await fetch("/data.json");
+            let data = await res.json()
+            setproducts(data)
+        };
+
+        getData();
+    }, []);
+
+    // when products state changes it should add right info cards to the cards
+    useEffect(() => {
+
+        let info = addCardInfo()
+
+        setCardInfos(info)
+    }, [products])
+
+
+
+
+
+    function randomNums() {
+        let nums = []
+        while (nums.length < 4) {
+            nums.push(Math.floor(Math.random() * products.length))
+            // test=[10,3,1,4]
+        }
+        return nums
+    };
+
+
+    function addCardInfo() {
+        let cardIndexses = randomNums()
+
+        let cardinfos = []
+        for (let i = 0; i < 4; i++) {
+            cardinfos.push(products[cardIndexses[i]])
+
+        }
+        console.log(cardinfos)
+        return cardinfos
+    }
+
+
     return (
         <section className='flex flex-col gap-10 mt-12 mx-auto px-2  '>
             <h3 className='text-center font-extrabold text-5xl'>TOP SELLING</h3>
             <div className='w-full flex justify-center '>
 
-                <div className=' flex flex-row gap-3 w-fit justify-start items-center overflow-x-auto scrollbar-hide scroll-smooth'>
+                <ul className=' flex flex-row gap-3 w-fit justify-start items-center overflow-x-auto scrollbar-hide scroll-smooth'>
 
-                    <Item
-                        image={shirt}
-                        name="VERTICAL STRIPED SHIRT"
-                        price="$212"
-                        rateing="5.0/5"
-                    />
+                    {
+                        cardInfos.map((cardinfo, index) => <Item key={index} item={cardinfo} />)
+                    }
 
-                    <Item
-                        image={Tshirt}
-                        name="COURAGE GRAPHIC T-SHIRT"
-                        price="$130"
-                        rateing="4.0/5"
-                    />
-
-                    <Item
-                        image={shorts}
-                        name="LOOSE FIT BERMUDA SHORTS"
-                        price="$80"
-                        rateing="3.0/5"
-                    />
-
-                    <Item
-                        image={jeans}
-                        name="FADED SKINNY JEANS"
-                        price="$180"
-                        rateing="4.5/5"
-                    />
-
-
-                </div>
+                </ul>
             </div>
             <div className='w-full mt-4 flex  justify-center items-center px-4  '>
                 <button className='w-full max-w-2xs md:w-fit lg:w-fitt px-[60px] py-[12px] font-medium text-center border-solid border-gray-500 border-2 rounded-full hover:bg-gray-200 ease-in-out '>

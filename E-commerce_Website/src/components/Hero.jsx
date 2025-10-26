@@ -24,8 +24,8 @@ function Hero() {
                     </button>
                 </div>
 
-                <ul className="flex flex-wrap justify-center lg:justify-start items-center gap-4 lg:gap-14 mt-4">
-                    <li className="border-r-2 border-gray-400 pr-5">
+                <ul className="flex flex-wrap justify-center lg:justify-start items-center gap-4 lg:gap-14 mt-4 text-center lg:text-start">
+                    <li className=" lg:border-r-2 border-gray-400 pr-5">
                         <h5 className="text-[40px] font-bold">200+</h5>
                         <p className="text-gray-500">International Brands</p>
                     </li>
@@ -38,7 +38,7 @@ function Hero() {
                         <p className="text-gray-500">Happy Customers</p>
                     </li>
                 </ul>
-              
+
             </section>
         </div>
     )

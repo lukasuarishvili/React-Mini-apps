@@ -6,14 +6,14 @@ import Header from '../components/Header'
 import ProductInfo from '../components/ProductInfo'
 
 // the data 
-import data from '../data.json'
+
 
 function ProductDetailPage() {
     return (
         <>
             <Ad />
             <Header />
-            <ProductInfo productData={data} />
+            <ProductInfo productData={data[4]} />
         </>
     )
 }
