@@ -7,8 +7,19 @@ import HomePageBg from "../assets/HomePageBg.jpg";
 
 function Hero() {
     return (
-        <div className="bg-[#F2F0F1] flex justify-center lg:justify-start items-center text-center md:text-start w-full h-fit p-16 font-roboto">
-            <section className="flex flex-col gap-8 lg:w-1/2 w-full">
+        <div className="bg-[#F2F0F1] flex justify-center lg:justify-start items-center text-center md:text-start w-full h-fit p-16 font-roboto bg-img bg-[url(/img/mountains.jpg)]"
+            style={
+                {
+                    backgroundImage: `url(${HomePageBg})`,
+                    backgroundSize: '600px',
+                    backgroundPosition: `bottom 80% right 15%  `,
+                    backgroundRepeat: 'no-repeat'
+                }
+            }
+        >
+            <section className="flex flex-col gap-8 lg:w-1/2 w-full"
+
+            >
                 <h3 className="text-[50px] md:text-[64px] font-bold leading-[64px]">
                     FIND CLOTHES <br /> THAT MATCH <br /> YOUR STYLE
                 </h3>

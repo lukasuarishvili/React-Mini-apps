@@ -44,8 +44,9 @@ function TopSelling() {
         let nums = []
         while (nums.length < 4) {
             nums.push(Math.floor(Math.random() * products.length))
-            // test=[10,3,1,4]
+            // test=[10,3,3,4]
         }
+
         return nums
     };
 

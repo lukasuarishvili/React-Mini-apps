@@ -10,7 +10,8 @@ import Arrivals from "../components/Arrivals";
 import TopSelling from "../components/TopSelling";
 import DressStyle from "../components/DressStyle";
 import HappyCustomers from '../components/HappyCustomers';
-
+import Footer from '../components/Footer';
+import Email from '../components/Email';
 
 function HomePage() {
     return (
@@ -30,7 +31,14 @@ function HomePage() {
 
             <DressStyle></DressStyle>
 
-            <HappyCustomers></HappyCustomers>
+            {/* <HappyCustomers></HappyCustomers> */}
+
+            <Email></Email>
+
+            
+            <Footer></Footer>
+
+
         </>
 
     );

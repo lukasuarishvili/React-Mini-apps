@@ -16,7 +16,7 @@ function Arrivals() {
     // thsi gets the data and stores it in products state
     useEffect(() => {
 
-        const getData = async () => {
+        async function getData() {
             let res = await fetch("/data.json");
             let data = await res.json()
             setproducts(data)
@@ -40,10 +40,11 @@ function Arrivals() {
 
     function randomNums() {
         let nums = []
-        while (nums.length < 4) {
+        while (nums.length < 19) {
             nums.push(Math.floor(Math.random() * products.length))
-            // test=[10,3,1,4]
+            // test=
         }
+
         return nums
     };
 
@@ -53,7 +54,7 @@ function Arrivals() {
 
         let cardinfos = [];
 
-        
+
         for (let i = 0; i < 4; i++) {
             cardinfos.push(products[cardIndexses[i]])
         }
