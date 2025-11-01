@@ -8,10 +8,13 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import Arrivals from "../components/Arrivals";
 import TopSelling from "../components/TopSelling";
+import Suggestion from '../components/Suggestion';
 import DressStyle from "../components/DressStyle";
 import HappyCustomers from '../components/HappyCustomers';
 import Footer from '../components/Footer';
 import Email from '../components/Email';
+
+
 
 function HomePage() {
     return (
@@ -25,9 +28,10 @@ function HomePage() {
 
             <Banner></Banner>
 
-            <Arrivals></Arrivals>
+            <Suggestion title="NEW ARRIVALS" borderTop={false} />
 
-            <TopSelling></TopSelling>
+            <Suggestion title="TOP SELLING" borderTop={true} />
+
 
             <DressStyle></DressStyle>
 
@@ -35,7 +39,6 @@ function HomePage() {
 
             <Email></Email>
 
-            
             <Footer></Footer>
 
 
