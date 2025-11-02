@@ -2,14 +2,13 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 
-//  components
-import Header from "./components/Header";
+
 
 
 // pages
 import HomePage from "./pages/HomePage";
 import ProductDetailPages from './pages/ProductDetailPage'
-
+import Cart from "./pages/Cart";
 
 function App() {
 
@@ -20,6 +19,7 @@ function App() {
         <Routes>
           <Route index path="/" element={<HomePage />} />
           <Route path="/Product" element={<ProductDetailPages />} />
+          <Route path="/Cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </>
