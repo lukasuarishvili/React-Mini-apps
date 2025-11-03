@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 // images
 import threeLine from "../assets/three_Lines.png";
@@ -20,25 +21,28 @@ function Header() {
                 />
             </button>
 
-            <h1 className="text-black font-bold text-[32px]">SHOP.CO</h1>
+            <h1 className="text-black font-bold text-[32px]">
+                <Link to="/"> SHOP.CO</Link>
+
+            </h1>
 
             <nav className="hidden md:flex items-center gap-6 text-gray-800 font-medium ">
                 <div className="flex items-center gap-0.5 justify-center">
-                    <a href="#" className="text-black">
+                    <Link to="/Product" className="text-black">
                         Shop
-                    </a>
+                    </Link>
                     <img src={down_arrow} alt="down arrrow" className="w-4 h-4" />
                 </div>
 
-                <a href="#" className="text-black">
+                <Link to="/" className="text-black">
                     On Sale
-                </a>
-                <a href="#" className="text-black">
+                </Link>
+                <Link to="/" className="text-black">
                     New Arrivals
-                </a>
-                <a href="#" className="text-black">
+                </Link>
+                <Link to="/" className="text-black">
                     Brands
-                </a>
+                </Link>
             </nav>
 
             <div className=" lg:gap-1.5 md:gap-1.5  items-center bg-[#F0F0F0] rounded-full px-4 py-2 w-1/3  hidden lg:flex md:flex ">
@@ -55,7 +59,10 @@ function Header() {
                     <img src={shusha} alt="shusha " className="w-full h-full " />
                 </button>
                 <button className='w-6 h-6'>
-                    <img src={Cart} alt="Cart" className="w-full h-full " />
+                    <Link to="/cart">
+                        <img src={Cart} alt="Cart" className="w-full h-full " />
+                    </Link>
+
                 </button>
                 <button className='w-6 h-6'>
                     <img src={userLogo} alt="User" className="w-full h-full" />

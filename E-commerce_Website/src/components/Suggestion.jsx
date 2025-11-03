@@ -34,8 +34,7 @@ function Suggestion({ title, borderTop }) {
 
 
 
-    //  ❗❗❗❗❗❗❗❗need randomnes 
-
+   
     function randomNums() {
         let nums = []
 
