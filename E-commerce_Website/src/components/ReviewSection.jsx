@@ -5,7 +5,14 @@ import Review from './review';
 import toogle from '../assets/toggle.png'
 import down_arrow from "../assets/down_arrow.png";
 
-function ReviewSection(Reviews) {
+function ReviewSection({ reviews }) {
+
+    if (!reviews || reviews.length === 0) {
+        <>
+            <h1>no reviews</h1>
+        </>
+    }
+
     return (
         <section className='w-full mx-auto flex flex-col gap-5 py-3 lg:px-20  px-2 '>
 
@@ -41,33 +48,20 @@ function ReviewSection(Reviews) {
 
 
             {/* revius card section grid */}
-
             <div className='flex flex-wrap lg:grid    lg:grid-cols-2 gap-3.5'>
 
-                <div>
-                    <Review />
-                </div>
+                {
+                    reviews.map((Review_info, index) => (
+                        <Review key={index} Review_info={Review_info} />
+                    ))
+                }
 
-                <div>
-                    <Review />
-                </div>
 
-                <div>
-                    <Review />
-                </div>
+                {console.log(reviews)}
 
-                <div>
-                    <Review />
-                </div>
-
-                <div>
-                    <Review />
-                </div>
-
-                <div>
-                    <Review />
-                </div>
             </div>
+
+
 
             <button className='self-center px-4 py-3.5 border-gray-300 border-[2px] text-black font-semibold rounded-[62px]'>
                 Load More Reviews

@@ -1,11 +1,16 @@
 import React from 'react'
-import { useState , Link, useContext,  } from 'react';
+import { useState, useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { productContext } from '../App';
 
 // compmeonets
 import Item from './Item';
 
 
 function Suggestion({ title, borderTop }) {
+
+    let { setChosenProduct } = useContext(productContext);
+
     let [products, setproducts] = useState([]);
     let [cardInfos, setCardInfos] = useState([])
 
@@ -63,17 +68,22 @@ function Suggestion({ title, borderTop }) {
         <section className={`flex flex-col gap-10 mt-12 mx-auto max-w-fit px-2 py-3   ${borderTop ? "border-t-[2px] border-gray-400 " : 'border-none'} `}>
             <h3 className='text-center font-extrabold text-5xl'>{title}</h3>
             <div className='w-full flex justify-center '>
-                <button className='text-start flex flex-row gap-3 w-fit justify-start items-center overflow-x-auto  scroll-smooth'>
+                <div className='text-start flex flex-row gap-3 w-fit justify-start items-center overflow-x-auto  scroll-smooth'>
 
                     {
                         cardInfos.map((cardinfo, index) =>
-                            <Link to="/Product">
-                                <Item key={index} item={cardinfo} />
+                            <Link
+                                to="/product"
+                                key={index}
+                                onClick={()=>{setChosenProduct(cardinfo)}}
+                            >
+                                <Item item={cardinfo} />
                             </Link>
+
                         )
                     }
 
-                </button>
+                </div>
             </div>
             <div className='w-full mt-4 flex  justify-center items-center px-4 '>
                 <button className='w-full max-w-2xs md:w-fit lg:w-fitt px-[60px] py-[12px] font-medium text-center border-solid border-gray-500 border-2 rounded-full hover:bg-gray-200 ease-in-out '>
@@ -82,7 +92,7 @@ function Suggestion({ title, borderTop }) {
 
             </div>
 
-        </section>
+        </section >
 
     )
 }

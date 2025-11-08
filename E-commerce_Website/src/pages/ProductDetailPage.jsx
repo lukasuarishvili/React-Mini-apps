@@ -1,4 +1,6 @@
 import React from 'react'
+import { useContext } from 'react'
+import { productContext } from '../App'
 
 // components
 import Ad from '../components/Ad'
@@ -9,26 +11,25 @@ import Suggestion from '../components/Suggestion'
 import Footer from '../components/Footer'
 import Email from '../components/Email'
 
-// the data 
-import data from '../deleteIt.json'
+
 
 function ProductDetailPage() {
 
-
+    let { chosenProduct } = useContext(productContext);
+   
     return (
         <>
             <Ad />
+
             <Header />
-            <ProductInfo productData={data[6]} />
+            
+            <ProductInfo productData={chosenProduct} />
+    
+            <Suggestion title="You might also like" borderTop={false} />
 
-            <ReviewSection review={data[4].reviews} />
+            <Email />
 
-            <Suggestion title="You might also like" borderTop={false}/>
-
-
-            <Email/>
-
-            <Footer/>
+            <Footer />
         </>
     )
 }
