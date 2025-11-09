@@ -26,7 +26,7 @@ function Suggestion({ title, borderTop }) {
         getData();
     }, []);
 
-    // when products state changes it should add right info cards to the cards
+    // when products state changes it should add right info cards to the cards\
     useEffect(() => {
         let info = addCardInfo()
         setCardInfos(info)
@@ -58,7 +58,6 @@ function Suggestion({ title, borderTop }) {
         for (let i = 0; i < 4; i++) {
             cardinfos.push(products[cardIndexses[i]])
         }
-        console.log(cardinfos)
         return cardinfos
     }
 

@@ -7,7 +7,7 @@ import down_arrow from "../assets/down_arrow.png";
 
 function ReviewSection({ reviews }) {
 
-    if (!reviews || reviews.length === 0) {
+    if ( reviews.length === 0) {
         <>
             <h1>no reviews</h1>
         </>
@@ -57,7 +57,6 @@ function ReviewSection({ reviews }) {
                 }
 
 
-                {console.log(reviews)}
 
             </div>
 

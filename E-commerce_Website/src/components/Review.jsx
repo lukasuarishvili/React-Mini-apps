@@ -3,9 +3,8 @@ import React from 'react'
 import dots from '../assets/dots.png'
 
 function Review({Review_info}) {
-    console.log(Review_info)
     return (
-        <div className='flex flex-col gap-1 border-2 border-gray-200 rounded-[20px] p-3 '>
+        <div className='w-full  flex flex-col gap-1 border-2 border-gray-200 rounded-[20px] p-3 '>
             <div className='flex justify-between w-full'>
                 <h3>⭐⭐⭐⭐</h3>
                 <img src={dots} alt="dots" className='w-6 h-6' />

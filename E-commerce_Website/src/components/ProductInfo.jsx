@@ -121,9 +121,9 @@ function ProductInfo({ productData }) {
 
                                 <div className='flex gap-5 min-w-max '>
 
-                                    <div className='flex py-4 px-5 gap-6 items-center  bg-[#b4b4b4] opacity-60 rounded-[62px]'>
+                                    <div className='min-w-fit flex py-4 px-5 gap-6 items-center  bg-[#b4b4b4] opacity-60 rounded-[62px]'>
 
-                                        <button onClick={() => { setProductCount(productCount + 1) }}>
+                                        <button onClick={() => { setProductCount(productCount - 1) }}>
                                             <img src={minus} alt="decrement" className='w-5 h-5' />
                                         </button>
 
