@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProductDetailPages from './pages/ProductDetailPage'
 import Cart from "./pages/Cart";
-
+import CategoryPage from "./pages/CategoryPage";
 // context
 export let productContext = createContext();
 
@@ -62,7 +62,7 @@ function App() {
       <productContext.Provider value={{ chosenProduct, setChosenProduct }}>
         <BrowserRouter>
           <Routes>
-            <Route index path="/" element={<HomePage />} />
+            <Route index path="/" element={<CategoryPage/>} />
             <Route path="/Product" element={<ProductDetailPages />} />
             <Route path="/Cart" element={<Cart />} />
           </Routes>
