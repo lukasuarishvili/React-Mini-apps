@@ -1,10 +1,10 @@
 import React from 'react'
 
 // images
-import Gym from '../assets/Gym.png'
-import Party from '../assets/party.png'
-import Formal from '../assets/Formal.png'
-import Casual from '../assets/Casual.png'
+import Gym from '../../assets/Gym.png'
+import Party from '../../assets/party.png'
+import Formal from '../../assets/Formal.png'
+import Casual from '../../assets/Casual.png'
 
 
 function DressStyle() {

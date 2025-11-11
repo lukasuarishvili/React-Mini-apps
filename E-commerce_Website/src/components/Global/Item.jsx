@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 // images
-import star from '../assets/star.png'
-import HalfStar from '../assets/star-half48.png'
+import star from '../../assets/star.png'
+import HalfStar from '../../assets/star-half48.png'
 
 function Item({ item }) {
 

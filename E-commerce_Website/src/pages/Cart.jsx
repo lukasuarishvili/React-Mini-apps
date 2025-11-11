@@ -3,11 +3,11 @@ import React from 'react'
 
 
 // components
-import Header from '../components/Header'
-import Ad from '../components/Ad'
-import CartInfo from '../components/CartInfo'
-import Email from '../components/Email'
-import Footer from '../components/Footer'
+import Ad from '../components/Global/Ad'
+import Header from "../components/Global/Header";
+import CartInfo from '../components/Cart/CartInfo';
+import Email from '../components/Global/Email'
+import Footer from '../components/Global/Footer'
 
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 
 // images
-import email from '../assets/email.png'
+import email from '../../assets/email.png'
 
 
 function Email() {

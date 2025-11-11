@@ -3,13 +3,13 @@ import { useContext } from 'react'
 import { productContext } from '../App'
 
 // components
-import Ad from '../components/Ad'
-import Header from '../components/Header'
-import ProductInfo from '../components/ProductInfo'
-import ReviewSection from '../components/ReviewSection'
-import Suggestion from '../components/Suggestion'
-import Footer from '../components/Footer'
-import Email from '../components/Email'
+import Ad from '../components/Global/Ad'
+import Header from "../components/Global/Header";
+import ProductInfo from '../components/Detailpage/ProductInfo';
+import ReviewSection from '../components/Detailpage/ReviewSection'
+import Suggestion from '../components/Global/Suggestion'
+import Footer from '../components/Global/Footer'
+import Email from '../components/Global/Email'
 
 
 

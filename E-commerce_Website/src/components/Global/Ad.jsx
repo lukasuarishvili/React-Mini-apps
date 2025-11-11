@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 
 // images 
-import x from '../assets/X.png'
+import x from '../../assets/X.png'
 
 
 function Ad() {

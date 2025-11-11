@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { productContext } from '../App';
+import { productContext } from '../../App';
 
 // compmeonets
 import Item from './Item';

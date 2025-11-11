@@ -1,9 +1,9 @@
 import React from 'react'
-import Review from './review';
+import Review from '../Global/Review';
 
 // images
-import toogle from '../assets/toggle.png'
-import down_arrow from "../assets/down_arrow.png";
+import toogle from '../../assets/toggle.png'
+import down_arrow from "../../assets/down_arrow.png";
 
 function ReviewSection({ reviews }) {
 

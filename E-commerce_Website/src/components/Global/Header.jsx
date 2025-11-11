@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 // images
-import threeLine from "../assets/three_Lines.png";
-import down_arrow from "../assets/down_arrow.png";
-import Cart from "../assets/Cart.png";
-import userLogo from "../assets/user_logo.png";
-import shusha from '../assets/shusha.png'
-import shushaGray from '../assets/shusha gray.png'
+import threeLine from "../../assets/three_Lines.png";
+import down_arrow from "../../assets/down_arrow.png";
+import Cart from "../../assets/Cart.png";
+import userLogo from "../../assets/user_logo.png";
+import shusha from '../../assets/shusha.png'
+import shushaGray from '../../assets/shusha gray.png'
 
 function Header() {
     return (

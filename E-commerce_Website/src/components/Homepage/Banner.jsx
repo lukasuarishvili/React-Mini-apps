@@ -2,11 +2,11 @@ import React from 'react'
 
 
 // images
-import calvin from "../assets/companes/Calvin_clein.png";
-import versel from "../assets/companes/versel.png";
-import zara from "../assets/companes/zara-logo-1 1.png";
-import prada from "../assets/companes/prada-logo-1 1.png";
-import gucci from "../assets/companes/gucci-logo-1 1.png";
+import calvin from "../../assets/companes/Calvin_clein.png";
+import versel from "../../assets/companes/versel.png";
+import zara from "../../assets/companes/zara-logo-1 1.png";
+import prada from "../../assets/companes/prada-logo-1 1.png";
+import gucci from "../../assets/companes/gucci-logo-1 1.png";
 
 
 function Banner() {

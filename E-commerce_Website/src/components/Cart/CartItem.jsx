@@ -1,13 +1,13 @@
 import React from 'react'
 
 // images
-import tshirt from '../assets/tshirt.png'
-import pantt from '../assets/CLOTH1.png'
-import pantts from '../assets/CLOTH2.png'
-import trash from '../assets/trash.png'
-import plus from '../assets/plus.png'
-import minus from '../assets/minus.png'
-import promo from '../assets/promo.png'
+import tshirt from '../../assets/tshirt.png'
+import pantt from '../../assets/CLOTH1.png'
+import pantts from '../../assets/CLOTH2.png'
+import trash from '../../assets/trash.png'
+import plus from '../../assets/plus.png'
+import minus from '../../assets/minus.png'
+import promo from '../../assets/promo.png'
 
 
 export default function CartItem({ borderTop }) {

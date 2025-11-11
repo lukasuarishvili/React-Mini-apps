@@ -1,6 +1,6 @@
 import React from 'react'
 
-import dots from '../assets/dots.png'
+import dots from '../../assets/dots.png'
 
 function Review({Review_info}) {
     return (

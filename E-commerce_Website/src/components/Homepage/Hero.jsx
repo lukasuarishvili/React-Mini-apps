@@ -1,7 +1,7 @@
 import React from 'react'
 
 // images
-import HomePageBg from "../assets/HomePageBg.jpg";
+import HomePageBg from "../../assets/HomePageBg.jpg";
 
 
 

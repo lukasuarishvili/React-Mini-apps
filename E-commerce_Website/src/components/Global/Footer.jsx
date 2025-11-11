@@ -3,15 +3,15 @@ import React from 'react'
 
 
 // images
-import insta from '../assets/insta.png'
-import github from '../assets/github.png'
-import facebook from '../assets/facebook.png'
-import tviter from '../assets/tviter.png'
+import insta from '../../assets/insta.png'
+import github from '../../assets/github.png'
+import facebook from '../../assets/facebook.png'
+import tviter from '../../assets/tviter.png'
 
-import visa from '../assets/visa.png'
-import red from '../assets/rde.png'
-import applepay from '../assets/applepay.png'
-import googlepay from '../assets/googlepay.png'
+import visa from '../../assets/visa.png'
+import red from '../../assets/rde.png'
+import applepay from '../../assets/applepay.png'
+import googlepay from '../../assets/googlepay.png'
 
 
 function Footer() {

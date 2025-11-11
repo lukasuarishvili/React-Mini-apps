@@ -2,11 +2,11 @@ import React from 'react'
 import { useState } from 'react'
 
 // images
-import star from '../assets/star.png'
-import HalfStar from '../assets/star-half48.png'
-import Yes from '../assets/y.png'
-import plus from '../assets/plus.png'
-import minus from '../assets/minus.png'
+import star from '../../assets/star.png'
+import HalfStar from '../../assets/star-half48.png'
+import Yes from '../../assets/y.png'
+import plus from '../../assets/plus.png'
+import minus from '../../assets/minus.png'
 
 // components
 import ReviewSection from './ReviewSection'

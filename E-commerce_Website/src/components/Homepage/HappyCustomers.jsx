@@ -2,8 +2,8 @@ import React from 'react'
 
 
 // images
-import arrowleft from '../assets/arrow-left.png'
-import arrowRight from '../assets/arrow-right.png'
+import arrowleft from '../../assets/arrow-left.png'
+import arrowRight from '../../assets/arrow-right.png'
 function HappyCustomers() {
     return (
         <section className='w-full flex flex-col gap-7 px-6 lg:px-24 mx-auto'>
