@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useContext } from 'react';
 
 
 // components
@@ -9,9 +9,12 @@ import CartInfo from '../components/Cart/CartInfo';
 import Email from '../components/Global/Email'
 import Footer from '../components/Global/Footer'
 
-
+// context
+import { productContext } from '../App';
 
 function Cart() {
+
+    let {cartItem } = useContext(productContext);
 
     return (
         <>
@@ -19,7 +22,7 @@ function Cart() {
 
             <Header />
 
-            <CartInfo />
+            <CartInfo data={cartItem} />
 
             <Email />
 

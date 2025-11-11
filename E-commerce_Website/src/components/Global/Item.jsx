@@ -28,7 +28,7 @@ function Item({ item }) {
 
 
     return (
-        <div className='flex flex-col  px-1 py-1 gap-1'>
+        <div className='min-w-max flex flex-col  px-1 py-1 gap-1'>
             <div className='max-w[295px] h-[298px]'>
                 <img src={imgList[0]} alt="item image" className="  lg:w-[295px] h-full w-full rounded-[20px] object-cover" />
             </div>

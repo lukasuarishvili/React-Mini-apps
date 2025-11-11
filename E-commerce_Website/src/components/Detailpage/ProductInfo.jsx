@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
 
 // images
@@ -11,7 +11,19 @@ import minus from '../../assets/minus.png'
 // components
 import ReviewSection from './ReviewSection'
 
+
+// context
+import { productContext } from '../../App'
+
+
 function ProductInfo({ productData }) {
+    // adding it to the cart
+    let { CartItem, setCartitems } = useContext(productContext);
+
+    // thechosenProducts data
+    let { chosenProduct, setChosenProduct } = useContext(productContext);
+
+
     let [productCount, setProductCount] = useState(1)
 
     let rateing = productData.rate
@@ -135,15 +147,15 @@ function ProductInfo({ productData }) {
                                         </button>
                                     </div>
 
-                                    <button className='bg-black text-white py-4 px-[54px] rounded-[62px] w-full '>
+                                    <button className='bg-black text-white py-4 px-[54px] rounded-[62px] w-full hover:bg-gray-700 '
+                                        onClick={() => {
+                                            setCartitems([ chosenProduct])
+                                            console.log(chosenProduct)
+                                        }}>
                                         Add to Cart
                                     </button>
                                 </div>
-
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
