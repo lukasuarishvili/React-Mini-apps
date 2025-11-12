@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useState } from 'react'
 
 // images
@@ -29,17 +29,20 @@ function ProductInfo({ productData }) {
     const reviews = productData.reviews
     const rate = parseFloat(rateing);
 
+    // stars logic
     const stars = [];
-
 
     for (let i = 1; i <= Math.floor(rate); i++) {
         stars.push(<img src={star} alt="star" className='w-7 h-7' />);
     }
 
-
     if (rate % 1 >= 0.5) {
         stars.push(<img src={HalfStar} alt="halfstar" className='w-7 h-7' />);
     }
+
+    let colors = productData.colorList
+
+
 
 
     return (
@@ -57,29 +60,15 @@ function ProductInfo({ productData }) {
 
                             {
                                 productData.imgList.map((img, index) =>
+
                                     <img
                                         key={index}
                                         src={img}
-                                       
                                         className="w-[111px] h-[106px] md:w-[152px] md:h-[167px]  rounded-[20px]"
                                     />
                                 )
                             }
-                            {/* <img
-                                src={productData.imgList[0]}
-                                alt="img list 1"
-                                className="w-[111px] h-[106px] md:w-[152px] md:h-[167px]  rounded-[20px]"
-                            />
-                            <img
-                                src={productData.imgList[1]}
-                                alt="img list 2"
-                                className="w-[111px] h-[106px] md:w-[152px] md:h-[167px] rounded-[20px]"
-                            />
-                            <img
-                                src={productData.imgList[2]}
-                                alt="img list 3"
-                                className="w-[111px] h-[106px]  md:w-[152px] md:h-[167px]  rounded-[20px]"
-                            /> */}
+
                         </div>
 
                         {/* main big image */}
@@ -105,18 +94,18 @@ function ProductInfo({ productData }) {
                                 <h4 className='text-gray-500'>Select Colors</h4>
                                 <div className='flex gap-2 '>
 
+                                    {
+                                        colors.map((element) =>
 
-                                    <button className='p-2 text-white rounded-[50%]' style={{ backgroundColor: productData.colorList[0] }}>
-                                        <img src={Yes} alt="yes" className='w-4 h-4' />
-                                    </button>
 
-                                    <div className='p-2 text-white rounded-[50%]' style={{ backgroundColor: productData.colorList[1] }}>
-                                        <img src={Yes} alt="yes" className='w-4 h-4' />
-                                    </div>
 
-                                    <div className='p-2 text-white rounded-[50%]' style={{ backgroundColor: productData.colorList[2] }}>
-                                        <img src={Yes} alt="yes" className='w-4 h-4' />
-                                    </div>
+                                            <button className='p-2 text-white rounded-[50%] bg-green-200'
+                                                style={{ backgroundColor: element }} >
+                                                <img src={Yes} alt="yes" className='w-4 h-4' />
+                                            </button>
+                                        )
+                                    }
+
 
                                 </div>
 
@@ -147,14 +136,14 @@ function ProductInfo({ productData }) {
 
                                     <div className='min-w-fit flex py-4 px-5 gap-6 items-center  bg-[#b4b4b4] opacity-60 rounded-[62px]'>
 
-                                        <button onClick={() => { setProductCount(productCount + 1) }}>
+                                        <button onClick={() => { setProductCount(productCount - 1) }}>
                                             <img src={minus} alt="decrement" className='w-5 h-5' />
                                         </button>
 
                                         <p className='text-l'>{productCount}</p>
 
 
-                                        <button onClick={() => { setProductCount(productCount - 1) }}>
+                                        <button onClick={() => { setProductCount(productCount + 1) }}>
                                             <img src={plus} alt="increment" className='w-5 h-5' />
                                         </button>
                                     </div>
@@ -172,7 +161,7 @@ function ProductInfo({ productData }) {
                     </div>
                 </div>
 
-            </section>
+            </section >
 
             <ReviewSection reviews={reviews} />
         </>
