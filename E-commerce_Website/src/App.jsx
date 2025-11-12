@@ -8,7 +8,6 @@ import HomePage from "./pages/HomePage";
 import ProductDetailPages from './pages/ProductDetailPage'
 import Cart from "./pages/Cart";
 import CategoryPage from "./pages/CategoryPage";
-import CartItem from "./components/Cart/CartItem";
 
 // context
 export let productContext = createContext();
@@ -58,14 +57,14 @@ function App() {
       "id": 2
     });
 
-    let [cartItems, setCartitems]=useState([])
+  let [cartItems, setCartitems] = useState([])
 
   return (
     <>
-      <productContext.Provider value={{ chosenProduct, setChosenProduct, CartItem, setCartitems } }>
+      <productContext.Provider value={{ chosenProduct, setChosenProduct, cartItems, setCartitems }}>
         <BrowserRouter>
           <Routes>
-            <Route index path="/" element={<HomePage/>} />
+            <Route index path="/" element={<HomePage />} />
             <Route path="/Product" element={<ProductDetailPages />} />
             <Route path="/Cart" element={<Cart />} />
           </Routes>

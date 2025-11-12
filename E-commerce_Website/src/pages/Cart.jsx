@@ -13,16 +13,16 @@ import Footer from '../components/Global/Footer'
 import { productContext } from '../App';
 
 function Cart() {
-
-    let {cartItem } = useContext(productContext);
-
+    
+    let {cartItems } = useContext(productContext);
+    console.log(cartItems)
     return (
         <>
             <Ad />
 
             <Header />
 
-            <CartInfo data={cartItem} />
+            <CartInfo data={cartItems} />
 
             <Email />
 

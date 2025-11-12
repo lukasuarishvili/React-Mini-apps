@@ -10,7 +10,7 @@ import minus from '../../assets/minus.png'
 import promo from '../../assets/promo.png'
 
 
-export default function CartItem( {title, } ) {
+export default function CartItem( { item, borderTop } ) {
 
     let [itemCount, setItemCount] = useState(1);
 
@@ -19,13 +19,13 @@ export default function CartItem( {title, } ) {
         <div className={`flex flex-row gap-8 p-3  w-full px-4   ${borderTop ? "border-t-[1px] border-gray-300" : "border-none"} `}>
             <div className={`flex flex-row gap-3 `}>
                 <div className='w-[124px] h-[124px]'>
-                    <img src={pantts} alt="tshirt" className='w-full h-full' />
+                    <img src={item.imgList[0]} alt="tshirt" className='w-full h-full' />
                 </div>
                 <div className='flex flex-col'>
                     <h6 className='text-[20px] font-bold'>{item.title}</h6>
                     <p className='text-black text-[14px]'>Size:<em className='text-gray-500'>Large</em></p>
                     <p className='text-black text-[14px]'>Color:<em className='text-gray-500' >White</em></p>
-                    <h5 className='text-[24px] font-bold'>$145</h5>
+                    <h5 className='text-[24px] font-bold'>{item.price}</h5>
                 </div>
 
             </div>

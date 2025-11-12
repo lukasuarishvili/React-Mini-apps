@@ -17,11 +17,10 @@ import { productContext } from '../../App'
 
 
 function ProductInfo({ productData }) {
-    // adding it to the cart
-    let { CartItem, setCartitems } = useContext(productContext);
 
-    // thechosenProducts data
-    let { chosenProduct, setChosenProduct } = useContext(productContext);
+    // adding it to the cart
+    let { cartItems, setCartitems, chosenProduct, setChosenProduct } = useContext(productContext);
+
 
 
     let [productCount, setProductCount] = useState(1)
@@ -55,7 +54,18 @@ function ProductInfo({ productData }) {
 
                         {/* three smalll images */}
                         <div className='flex flex-row md:flex-col lg:flex-col gap-3 max-w-fit'>
-                            <img
+
+                            {
+                                productData.imgList.map((img, index) =>
+                                    <img
+                                        key={index}
+                                        src={img}
+                                       
+                                        className="w-[111px] h-[106px] md:w-[152px] md:h-[167px]  rounded-[20px]"
+                                    />
+                                )
+                            }
+                            {/* <img
                                 src={productData.imgList[0]}
                                 alt="img list 1"
                                 className="w-[111px] h-[106px] md:w-[152px] md:h-[167px]  rounded-[20px]"
@@ -69,7 +79,7 @@ function ProductInfo({ productData }) {
                                 src={productData.imgList[2]}
                                 alt="img list 3"
                                 className="w-[111px] h-[106px]  md:w-[152px] md:h-[167px]  rounded-[20px]"
-                            />
+                            /> */}
                         </div>
 
                         {/* main big image */}
@@ -94,6 +104,8 @@ function ProductInfo({ productData }) {
                             <div className='flex flex-col border-t-[1px] border-gray-300 py-2.5 gap-3'>
                                 <h4 className='text-gray-500'>Select Colors</h4>
                                 <div className='flex gap-2 '>
+
+
                                     <button className='p-2 text-white rounded-[50%]' style={{ backgroundColor: productData.colorList[0] }}>
                                         <img src={Yes} alt="yes" className='w-4 h-4' />
                                     </button>
@@ -135,22 +147,22 @@ function ProductInfo({ productData }) {
 
                                     <div className='min-w-fit flex py-4 px-5 gap-6 items-center  bg-[#b4b4b4] opacity-60 rounded-[62px]'>
 
-                                        <button onClick={() => { setProductCount(productCount - 1) }}>
+                                        <button onClick={() => { setProductCount(productCount + 1) }}>
                                             <img src={minus} alt="decrement" className='w-5 h-5' />
                                         </button>
 
                                         <p className='text-l'>{productCount}</p>
 
 
-                                        <button onClick={() => { setProductCount(productCount + 1) }}>
+                                        <button onClick={() => { setProductCount(productCount - 1) }}>
                                             <img src={plus} alt="increment" className='w-5 h-5' />
                                         </button>
                                     </div>
 
                                     <button className='bg-black text-white py-4 px-[54px] rounded-[62px] w-full hover:bg-gray-700 '
                                         onClick={() => {
-                                            setCartitems([ chosenProduct])
-                                            console.log(chosenProduct)
+                                            setCartitems([...cartItems, chosenProduct])
+
                                         }}>
                                         Add to Cart
                                     </button>

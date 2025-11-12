@@ -10,22 +10,28 @@ import plus from '../../assets/plus.png'
 import minus from '../../assets/minus.png'
 import promo from '../../assets/promo.png'
 
-function CartInfo({ cartsdata }) {
+function CartInfo({ data }) {
+
+    if ( data.length === 0) {
+        return <p className="text-center text-4xl font-bold font-roboto py-4"> cart is empty </p>;
+    }
+
+
+    console.log(data)
     return (
         <section className='w-full mx-auto px-2 md:px-10 lg:px-20 py-5 pb-12  flex flex-col  gap-3 '>
             <h5 className=' pt-4 border-t-2 border-gray-400'>{"Home > Cart"}</h5>
 
             <h4 className='text-[40px] font-extrabold '>Your cart</h4>
             <div className='w-full flex lg:flex-row  flex-wrap  gap-5' >
-
-
                 <div className='flex flex-col gap-2 rounded-[20px] border-gray-300 border-2 w-fitt max-w-[715px]'>
 
-                    {cartsdata ?
-                        cartsdata.map((item, index) => {
-                            <CartItem item={item} />
-                        }) : null
+                    {
+                        data.map((item) =>
+                            <CartItem item={item}></CartItem>
+                        )
                     }
+
 
                 </div>
 
