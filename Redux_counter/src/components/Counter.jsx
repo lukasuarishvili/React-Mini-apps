@@ -7,7 +7,7 @@ function Counter() {
 
     const dispatch = useDispatch();
     console.log(store.getState())
-    const count = useSelector((state) => { return state.counter.count })
+    const count = useSelector((state) => state.counter.count)
 
     console.log(count)
     return (
